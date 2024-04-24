@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose="2">
+  <test thread-count="5" name="Verify the Registration Success">
+  	<parameter name="email" value="sri@orikan.com"></parameter>
+  	<parameter name="password" value="abc#123"></parameter>
+  	<parameter name="confirmPassword" value="abc#123"></parameter>
+  	
+  	<parameter name="firstName" value="srinivas"></parameter>
+  	<parameter name="lastName" value="edara"></parameter>
+  	<parameter name="address" value="MYP"></parameter>
+  	<parameter name="postCode" value="500032"></parameter>
+  	<parameter name="city" value="HYD"></parameter>
+  	<parameter name="state" value="New South Wales"></parameter>
+  	
+  	<parameter name="cardHolderName" value="sriedara"></parameter>
+  	<parameter name="cardType" value="visa"></parameter>
+  	<parameter name="cardNumber" value="12345678901234"></parameter>
+  	<parameter name="cvv" value="754"></parameter>
+  	<parameter name="expiryMonth" value="August"></parameter>
+  	<parameter name="cardExpiryYear" value="2030"></parameter>
+    <classes>
+      <class name="orikan.Orikanapplication">
+      	<methods>
+      		<include name="registration"></include>
+      		<include name="contactBasicInfo"></include>
+      		<include name="paymentInfo"></include>
+      		<include name="ClickOnTermsAndConditions"></include>
+      		<include name="clickOnSubmitButton"></include>
+      		<include name="CompleteSection"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Verify the error messages of Registration tab">
+  	<parameter name="email" value=""></parameter>
+  	<parameter name="password" value=""></parameter>
+  	<parameter name="confirmPassword" value=""></parameter>
+  	
+    <classes>
+      <class name="orikan.Orikanapplication">
+      	<methods>
+      		<include name="registration"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Verify the error messages of Contact tab">
+  	<parameter name="email" value="sri@orikan.com"></parameter>
+  	<parameter name="password" value="abc#123"></parameter>
+  	<parameter name="confirmPassword" value="abc#123"></parameter>
+  	
+  	<parameter name="firstName" value=""></parameter>
+  	<parameter name="lastName" value=""></parameter>
+  	<parameter name="address" value=""></parameter>
+  	<parameter name="postCode" value=""></parameter>
+  	<parameter name="city" value=""></parameter>
+  	<parameter name="state" value=""></parameter>
+    <classes>
+      <class name="orikan.Orikanapplication">
+      	<methods>
+      		<include name="registration"></include>
+      		<include name="contactBasicInfo"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Verify the error messages of Registration tab">
+  	<parameter name="email" value=""></parameter>
+  	<parameter name="password" value=""></parameter>
+  	<parameter name="confirmPassword" value=""></parameter>
+  	
+    <classes>
+      <class name="orikan.Orikanapplication">
+      	<methods>
+      		<include name="registration"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Verify the error messages of Payment tab">
+  	<parameter name="email" value="sri@orikan.com"></parameter>
+  	<parameter name="password" value="abc#123"></parameter>
+  	<parameter name="confirmPassword" value="abc#123"></parameter>
+  	
+  	<parameter name="firstName" value="srinivas"></parameter>
+  	<parameter name="lastName" value="edara"></parameter>
+  	<parameter name="address" value="MYP"></parameter>
+  	<parameter name="postCode" value="500032"></parameter>
+  	<parameter name="city" value="HYD"></parameter>
+  	<parameter name="state" value="New South Wales"></parameter>
+  	
+  	<parameter name="cardHolderName" value=""></parameter>
+  	<parameter name="cardType" value=""></parameter>
+  	<parameter name="cardNumber" value=""></parameter>
+  	<parameter name="cvv" value=""></parameter>
+  	<parameter name="expiryMonth" value=""></parameter>
+  	<parameter name="cardExpiryYear" value=""></parameter>
+    <classes>
+      <class name="orikan.Orikanapplication">
+      	<methods>
+      		<include name="registration"></include>
+      		<include name="contactBasicInfo"></include>
+      		<include name="paymentInfo"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="Verify the error messages of Terms and Conditions tab">
+  	<parameter name="email" value="sri@orikan.com"></parameter>
+  	<parameter name="password" value="abc#123"></parameter>
+  	<parameter name="confirmPassword" value="abc#123"></parameter>
+  	
+  	<parameter name="firstName" value="srinivas"></parameter>
+  	<parameter name="lastName" value="edara"></parameter>
+  	<parameter name="address" value="MYP"></parameter>
+  	<parameter name="postCode" value="500032"></parameter>
+  	<parameter name="city" value="HYD"></parameter>
+  	<parameter name="state" value="New South Wales"></parameter>
+  	
+  	<parameter name="cardHolderName" value="sriedara"></parameter>
+  	<parameter name="cardType" value="visa"></parameter>
+  	<parameter name="cardNumber" value="12345678901234"></parameter>
+  	<parameter name="cvv" value="754"></parameter>
+  	<parameter name="expiryMonth" value="August"></parameter>
+  	<parameter name="cardExpiryYear" value="2030"></parameter>
+    <classes>
+      <class name="orikan.Orikanapplication">
+      	<methods>
+      		<include name="registration"></include>
+      		<include name="contactBasicInfo"></include>
+      		<include name="paymentInfo"></include>
+      		<include name="clickOnSubmitButton"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
